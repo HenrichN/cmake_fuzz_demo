@@ -30,3 +30,8 @@ target_link_libraries(
 
 include(GoogleTest)
 gtest_discover_tests(faulty_library_test)
+
+find_package(cifuzz)
+enable_fuzz_testing()
+
+add_fuzz_test(my_fuzz_test_4 my_fuzz_test_4.cpp)
